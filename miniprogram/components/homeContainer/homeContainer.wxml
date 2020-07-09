@@ -1,0 +1,16 @@
+<!--components/homeContainer/homeContainer.wxml-->
+<view class="section">
+	<view class="title"><text>/</text> {{homeTool.handlerTitle(title)}} <text>/</text></view>
+
+	<slot />
+</view>
+
+<wxs module="homeTool">
+	function handlerTitle(str) {
+		return str.split('').join(" ")
+	}
+
+	module.exports = {
+		handlerTitle: handlerTitle
+	}
+</wxs>

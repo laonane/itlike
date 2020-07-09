@@ -1,0 +1,29 @@
+<home-container title="全栈直播班">
+	<view class="live-content">
+		<view class="top" bindtap="_handlerHref">
+			<image class="img" mode="aspectFill" src="{{liveClass[0].live_img}}"></image>
+		</view>
+		<view class="bottom">
+			<view class="item" wx:for="{{liveClass[0].live_desc}}" wx:key="_id">
+				<view class="title">{{item.title}}</view>
+				<view class="desc">
+					<block wx:for="{{item.values}}" wx:for-item="value" wx:for-index="num" wx:key="num">
+						<text>{{num + 1 + ". " + value }}</text>
+					</block>
+				</view>
+			</view>
+		</view>
+	</view>
+</home-container>
+
+<home-container title="最新公开课">
+	<view>第二小节</view>
+</home-container>
+
+<home-container title="学习路线">
+	<view>第三小节</view>
+</home-container>
+
+<home-container title="关于撩课">
+	<view>第四小节</view>
+</home-container>
