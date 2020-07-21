@@ -5,9 +5,12 @@
   padding: 10rpx;
   box-sizing: border-box;
   /* background-color: green; */
+  /* font-size:20rpx;
+  vertical-align: middle;
+  margin: 0 20rpx; */
 }
 
-.title text{
+.title .txt{
   font-size:20rpx;
   vertical-align: middle;
   margin: 0 20rpx;

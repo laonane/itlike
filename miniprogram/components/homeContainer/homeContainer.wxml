@@ -1,7 +1,6 @@
 <!--components/homeContainer/homeContainer.wxml-->
 <view class="section">
-	<view class="title"><text>/</text> {{homeTool.handlerTitle(title)}} <text>/</text></view>
-
+	<view class="title"><text class="txt">/</text> {{homeTool.handlerTitle(title)}} <text class="txt">/</text></view>
 	<slot />
 </view>
 

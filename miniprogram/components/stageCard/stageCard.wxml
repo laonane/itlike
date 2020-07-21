@@ -1,0 +1,28 @@
+<view class="container">
+	<view class="num">{{stageM.ccNum}}</view>
+	<view class="interface">
+		<image class="interface_img" mode="aspectFill" src="cloud://xcx-cloud-dev-1jjzp.7863-xcx-cloud-dev-1jjzp-1301878328/itlike/home/refactory.jpg"></image>
+		<view class="mask" bindtap="_handlerOpen">{{isOpen ? '-' : '+'}}</view>
+	</view>
+	<view class="detail">
+		<view class="intro" hidden="{{isOpen}}">
+			<view class="title">{{stageM.ccDesc.descTitle}}</view>
+			<view class="item" wx:for="{{stageM.ccDesc.descValues}}" wx:key="index">{{item}}</view>
+		</view>
+		<view class="courseList" hidden="{{!isOpen}}">
+			<swiper circular class="course-list-swiper" previous-margin="50rpx" next-margin="50rpx">
+				<block wx:for="{{stageM.classes}}" wx:key="index">
+					<swiper-item>
+						<view class="course-item" bindtap="_handlerHref" data-mini="{{item.linkHref}}">
+							<image src="cloud://xcx-cloud-dev-1jjzp.7863-xcx-cloud-dev-1jjzp-1301878328/itlike/home/refactory02.jpg" class="course-img" mode="scaleFill" />
+							<view class="desc">
+								<text>讲师：{{item.classTeacher}}</text>
+								<text>课时：{{item.classDuration}}</text>
+							</view>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+	</view>
+</view>

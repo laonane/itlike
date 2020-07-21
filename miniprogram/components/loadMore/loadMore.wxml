@@ -1,0 +1,1 @@
+<view class="load-more iconfont icon-shuaxin {{isLoading ? 'loading' : ''}}">加载更多</view>

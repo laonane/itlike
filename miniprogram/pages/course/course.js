@@ -1,7 +1,60 @@
 // miniprogram/pages/course/course.js
+let currentPage = 1;
+
 Page({
-  _handlerHref() {
-    let obj = this.data.liveClass[0].jumpMiniPro
+  _loadStageData(pageNum = 1, pageSize = 2) {
+    this.setData({
+      isLoading: true,
+    })
+    wx.cloud.callFunction({
+      name: 'getStageData',
+      data: {
+        pageNum: pageNum,
+        pageSize: pageSize
+      },
+      success: res => {
+        // console.log('请求成功', res)
+        if (res.result.data.length > 0) {
+          currentPage++
+          // console.log(currentPage)
+        }
+        this.setData({
+          isLoading: false,
+          stageData: this.data.stageData.concat(res.result.data)
+        })
+      },
+      fail: err => {
+        console.error(err)
+      },
+      complete: () => {
+        this.setData({
+          isLoading: false,
+        })
+      }
+    })
+  },
+  _handlerLoadMoreTap: function (evt) {
+    this._loadStageData(currentPage)
+  },
+  _updateComents(index) {
+    // let index = evt.detail.current
+    let currentItem = this.data.freeLive[index]
+    let comments = currentItem.comments
+    this.setData({
+      currentComents: comments
+    })
+  },
+  _handlerChange(evt) {
+    let index = evt.detail.current
+    let currentItem = this.data.freeLive[index]
+    let comments = currentItem.comments
+    this.setData({
+      currentComents: comments
+    })
+  },
+  _handlerHref(evt) {
+    // console.log(evt)
+    let obj = evt.currentTarget.dataset.mini
     // console.log(obj)
     obj.fail = function () {
       wx.showToast({
@@ -15,7 +68,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    liveClass: {}
+    liveClass: {},
+    freeLive: [],
+    currentComents: [],
+    stageData: [],
+    isLoading: false,
+    videoInfo: {}
   },
 
   /**
@@ -23,17 +81,45 @@ Page({
    */
   onLoad: function (options) {
     wx.cloud.callFunction({
-      name: 'getLiveClass',
-      success: res => {
-        // console.log(res)
-        this.setData({
-          liveClass: res.result
-        })
-      },
-      fail: err => {
-        console.error(err)
-      }
-    })
+        name: 'getLiveClass',
+        success: res => {
+          // console.log(res)
+          this.setData({
+            liveClass: res.result
+          })
+        },
+        fail: err => {
+          console.error(err)
+        }
+      }),
+      wx.cloud.callFunction({
+        name: 'getFreeLive',
+        success: res => {
+          this.setData({
+            freeLive: res.result
+          }, () => {
+            if (res.result.length > 0) {
+              this._updateComents(0)
+            }
+          })
+        },
+        fail: err => {
+          console.error(err)
+        }
+      }),
+      this._loadStageData(currentPage),
+      wx.cloud.callFunction({
+        name: 'getAboutUs',
+        success: res => {
+          // console.log(res)
+          this.setData({
+            videoInfo: res.result[0]
+          })
+        },
+        fail: err => {
+          console.error(err)
+        }
+      })
   },
 
   /**

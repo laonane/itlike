@@ -9,11 +9,15 @@ cloud.init({
 // 云函数入口函数
 exports.main = async (event, context) => {
   let db = cloud.database()
-  let lcc = db.collection("live_classes")
-  return await lcc.where({
+  let flc = db.collection('free_lives')
+  let result = await flc.where({
     isShow: true
   }).get().then(res => {
-    // console.log(res.data[0])
-    return res.data.length > 0 ? res.data[0] : {}
+    if (res.data.length > 0) {
+      return res.data
+    }else{
+      return []
+    }
   })
+  return result
 }

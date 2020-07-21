@@ -1,10 +1,10 @@
 <home-container title="全栈直播班">
 	<view class="live-content">
-		<view class="top" bindtap="_handlerHref">
-			<image class="img" mode="aspectFill" src="{{liveClass[0].live_img}}"></image>
+		<view class="top" bindtap="_handlerHref" data-mini="{{liveClass.jumpMiniPro}}">
+			<image class="img" mode="aspectFill" src="{{liveClass.live_img}}"></image>
 		</view>
 		<view class="bottom">
-			<view class="item" wx:for="{{liveClass[0].live_desc}}" wx:key="_id">
+			<view class="item" wx:for="{{liveClass.live_desc}}" wx:key="_id">
 				<view class="title">{{item.title}}</view>
 				<view class="desc">
 					<block wx:for="{{item.values}}" wx:for-item="value" wx:for-index="num" wx:key="num">
@@ -17,13 +17,50 @@
 </home-container>
 
 <home-container title="最新公开课">
-	<view>第二小节</view>
+	<view class="free-live">
+		<swiper next-margin="60rpx" bindchange="_handlerChange">
+			<block wx:for="{{freeLive}}" wx:key="_id">
+				<swiper-item>
+					<view class="item" bindtap="_handlerHref" data-mini="{{item.jumpMini}}">
+						<image class="fm" mode="aspectFill" src="{{item.liveFM}}"></image>
+						<view class="time">直播时间：{{timeTool.getFormatTime(item.liveTime)}}</view>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="hot-comment">
+			<text class="title">热门\n时评</text>
+			<swiper class="comment" vertical circular autoplay>
+				<block wx:for="{{currentComents}}" wx:key="_id">
+					<swiper-item>
+						<view class="item">
+							<image class="comment-header" src="{{item.pic_url}}" mode="scaleToFill"></image>
+							<view class="comment-content">{{item.first_comment}}</view>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+	</view>
 </home-container>
 
 <home-container title="学习路线">
-	<view>第三小节</view>
+	<block wx:for="{{stageData}}" wx:key="_id">
+		<stage-card stageM="{{item}}" />
+	</block>
+	<load-more isLoading="{{isLoading}}" bindtap="_handlerLoadMoreTap" />
 </home-container>
 
 <home-container title="关于撩课">
-	<view>第四小节</view>
+	<view class="video-container">
+		<video class="videoPane" enable-play-gesture src="{{videoInfo.videoUrl}}" poster-for-crawler="{{videoInfo.poster}}" />
+	</view>
 </home-container>
+
+<view class="footer">Copyright © 2020 老衲.</view>
+
+<button open-type="contact" class="contact" style="width:100rpx;">
+	<image src="/images/icon/laona_avatar.jpg" class="contact-img"></image>
+</button>
+
+<wxs module="timeTool" src="../../tools/timeFormat.wxs" />

@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "home-container": "/components/homeContainer/homeContainer"
-  }
+    "home-container": "/components/homeContainer/homeContainer",
+    "stage-card": "/components/stageCard/stageCard",
+    "load-more": "/components/loadMore/loadMore"
+  },
+  "navigationBarTitleText": "撩课程"
 }

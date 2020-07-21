@@ -1,0 +1,47 @@
+/* components/loadMore/loadMore.wxss */
+@import "/style/icon-font.wxss";
+
+.load-more {
+  width: 200rpx;
+  height: 50rpx;
+  /* text-align: center; */
+  line-height: 50rpx;
+  box-sizing: border-box;
+  border-radius: 25rpx;
+  border: 1rpx solid red;
+  margin: 10rpx auto;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more::before {
+  margin-right: 10rpx;
+  color: red;
+}
+
+.load-more.loading::before {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

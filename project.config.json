@@ -2,12 +2,29 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx31b088927c500be7",
 	"projectname": "IT-Like",
