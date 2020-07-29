@@ -14,12 +14,13 @@ Page({
   /**
    * 分页加载 + 下拉刷新
    */
-  _handlerLoadMore() {
+  _handlerLoadMore: async function() {
     // console.log('questionID', this.data.questionM._id)
+    console.log(currentPageNum)
     this.setData({
       isLoading: true
     })
-    wx.cloud.callFunction({
+    await wx.cloud.callFunction({
       name: 'comments',
       data: {
         start: currentPageNum,
@@ -27,6 +28,8 @@ Page({
         questionID: questionID
       }
     }).then(res => {
+      console.log(res)
+      wx.stopPullDownRefresh()
       this.setData({
         isLoading: false
       })
@@ -40,7 +43,7 @@ Page({
         })
       }
       if (res.result.length > 0) {
-        ++currentPageNum
+        currentPageNum++
       }
     }).catch(err => {
       // console.log('分页数据加载失败', err)
@@ -74,6 +77,7 @@ Page({
     }).catch(err => {
       console.error('问题请求失败', err)
     })
+    currentPageNum = 1
     this._handlerLoadMore()
   },
 
@@ -118,7 +122,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this._handlerLoadMore()
+    // this._handlerLoadMore()
   },
 
   /**

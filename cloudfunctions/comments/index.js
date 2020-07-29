@@ -8,7 +8,7 @@ cloud.init({
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  console.log(event)
+  // console.log(event)
   let start = event.start || 1
   let count = event.count || 5
   let qID = event.questionID 

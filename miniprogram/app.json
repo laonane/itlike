@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/course/course",
-    "pages/index/index",
     "pages/mine/mine",
     "pages/discussion/discussion",
     "pages/publish/publish",
-    "pages/questionDetail/questionDetail"
+    "pages/questionDetail/questionDetail",
+    "pages/myDataPage/myDataPage"
   ],
   "tabBar": {
     "custom": false,
@@ -36,7 +36,6 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#d4237a",
-    "navigationBarTitleText": "IT-Like",
     "navigationBarTextStyle": "white"
   },
   "permission": {

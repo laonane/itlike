@@ -1,27 +1,28 @@
-// miniprogram/pages/index/index.js
+// pages/myDataPage/myDataPage.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.cloud.callFunction({
-    //   name: 'test',
-    //   data: {
-    //     name: "laona",
-    //     passwd: "123456"
-    //   },
-    //   success: res => {
-    //     console.log(res)
-    //   },
-    //   fail: err => console.error(err)
-    // })
+    let type = options.type
+    if (type === "answer") {
+      wx.setNavigationBarTitle({
+        title: '我的回答',
+      })
+    }
+    if (type === "question") {
+      wx.setNavigationBarTitle({
+        title: '我的提问',
+      })
+    }
   },
 
   /**

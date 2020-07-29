@@ -1,6 +1,11 @@
 // miniprogram/pages/mine/mine.js
 Page({
-
+  _handlerMyDataTag: (evt) => {
+    let type = evt.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/myDataPage/myDataPage?type=' + type,
+    })
+  },
   /**
    * 页面的初始数据
    */

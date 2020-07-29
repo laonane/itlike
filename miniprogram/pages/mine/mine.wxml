@@ -1,2 +1,28 @@
-<!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class="mine">
+  <view class="back" >
+    <open-data type="userAvatarUrl"/>
+  </view>
+  <view class="header">
+    <open-data type="userAvatarUrl"/>
+  </view>
+  <view class="nick-name">
+    <open-data type="userNickName" />
+  </view>
+  <view class="pane"></view>
+  <view class="menus">
+    <view class="cell iconfont icon-tiwen" data-type="question" bindtap="_handlerMyDataTag">
+      我的提问
+      <i class="iconfont icon-gengduo1 more"/>
+    </view>
+    <view class="cell iconfont icon-huida" data-type="answer" bindtap="_handlerMyDataTag">
+      我的回答
+      <i class="iconfont icon-gengduo1 more"/>
+    </view>
+  </view>
+  <view class="share-mp">
+    <view class="cell iconfont icon-tuijian">
+         推荐小程序
+      <i class="iconfont icon-gengduo1 more"/>
+    </view>
+  </view>
+</view>
