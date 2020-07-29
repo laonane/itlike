@@ -15,9 +15,9 @@
 			return "(" + count + ")"
 		}
 		if (count < 10000) {
-			return "(" + parseFloat(count / 1000).toFixed(2) + "k)"
+			return "(" + parseFloat(count / 1000).toFixed(1) + "k)"
 		}
-		return "(" + parseFloat(count / 10000).toFixed(2) + "w)"
+		return "(" + parseFloat(count / 10000).toFixed(1) + "w)"
 	}
 	module.exports = {
 		countFormat: countFormat

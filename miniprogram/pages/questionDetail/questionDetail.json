@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "question-card": "/components/questionCard/questionCard",
+    "question-bar": "/components/questionBar/questionBar",
+    "comment-item": "/components/commentItem/commentItem",
+    "load-more": "/components/loadMore/loadMore"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "问题详情"
 }

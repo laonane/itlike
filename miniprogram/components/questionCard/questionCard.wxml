@@ -1,4 +1,4 @@
-<view class="questionCard">
+<view class="questionCard" bindtap="_handlerCard">
 	<!-- 个人信息和发布信息 -->
 	<view class="top">
 		<image class="headerImg" src="{{questionM.userinfo.avatarUrl}}" />
@@ -17,7 +17,7 @@
 		<!-- style1 style24 style356789 -->
 		<view class="{{styleTool.getStyle(questionM.question.fileIDs.length)}}">
 			<block wx:for="{{questionM.question.fileIDs}}" wx:key="_id" wx:for-item="picUrl"> 
-				<image mode="aspectFill" src="{{picUrl}}" data-src="{{picUrl}}" bindtap="_handlerPreviewImage"/>
+				<image class="img" mode="aspectFill" src="{{picUrl}}" data-src="{{picUrl}}" catchtap="_handlerPreviewImage"/>
 			</block>
 		</view>
 	</view>

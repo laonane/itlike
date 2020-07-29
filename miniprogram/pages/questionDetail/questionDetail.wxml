@@ -1,2 +1,16 @@
-<!--pages/questionDetail/questionDetail.wxml-->
-<text>pages/questionDetail/questionDetail.wxml</text>
+<view class="container">
+	<question-card questionM="{{questionM}}" class="questionCard" />
+	<question-bar class="questionBar" questionID="{{questionM._id}}" bind:commentSuccessEvent="_handlerCommentSuccess" />
+
+	<view class="commentPane">
+		<view class="top">评论列表</view>
+		<view class="comment">
+			<block wx:for="{{commentM}}" wx:key="_id">
+				<comment-item commentM="{{item}}" />
+			</block>
+		</view>
+		<load-more isLoading="{{isLoading}}" bindtap="_handlerLoadMore" />
+	</view>
+
+
+</view>

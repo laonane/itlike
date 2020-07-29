@@ -26,6 +26,15 @@ Component({
         urls: this.data.questionM.question.fileIDs,
         current: evt.currentTarget.dataset.src
       })
+    },
+    _handlerCard(evt) {
+      let pages = getCurrentPages()
+      let currentPage = pages[pages.length - 1]
+      if (currentPage.route !== '/pages/questionDetail/questionDetail') {
+        wx.navigateTo({
+          url: '/pages/questionDetail/questionDetail?qid=' + this.data.questionM._id,
+        })
+      }
     }
   }
 })

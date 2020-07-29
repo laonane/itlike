@@ -1,0 +1,14 @@
+<view class="commentCard">
+  <view class="top">
+    <image class="img" src="{{commentM.userInfo.avatarUrl}}" />
+    <text class="txt">{{commentM.userInfo.nickName}}</text>
+  </view>
+  <view class="content">
+    {{commentM.comment}}
+  </view>
+  <view class="time">
+     {{timeTool.getShowTime(commentM.createTime)}}
+  </view>
+</view>
+
+<wxs module="timeTool" src="../../tools/timeFormat.wxs"/>

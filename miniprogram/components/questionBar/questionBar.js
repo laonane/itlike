@@ -90,8 +90,9 @@ Component({
           wx.hideLoading()
           this.setData({
             isAnswer: false,
-            commentCount: this.data.commentCount + 1
+            questionID: this.data.questionID
           })
+          this.triggerEvent('commentSuccessEvent')
           wx.showToast({
             title: '评论成功',
           })
@@ -131,25 +132,13 @@ Component({
       this._handlerUserInfo(evt.detail.userInfo)
     },
   },
-  lifetimes: {
-    pageLifetimes: {
-      show: async function () {
-        // 页面被展示
-        await aC.where({
-          qID: this.data.questionID
-        }).count().then(res => {
-          this.setData({
-            commentCount: res.total
-          })
-        }).catch(err => {
-          console.log('请求数据库失败', err)
-        })
-      }
-    },
-    attached: async function () {
-      // 在组件实例进入页面节点树时执行
-      await aC.where({
-        qID: this.data.questionID
+  /**
+   * 数据监听器
+   */
+  observers: {
+    "questionID": function (val) {
+      aC.where({
+        qID: val
       }).count().then(res => {
         this.setData({
           commentCount: res.total
@@ -159,17 +148,19 @@ Component({
       })
     }
   },
-  // 以下是旧式的定义方式，可以保持对 <2.2.3 版本基础库的兼容
-  attached: async function () {
-    // 在组件实例进入页面节点树时执行
-    await aC.where({
-      qID: this.data.questionID
-    }).count().then(res => {
-      this.setData({
-        commentCount: res.total
+  pageLifetimes: {
+    show: function () {
+      // 页面被展示
+      aC.where({
+        qID: this.data.questionID
+      }).count().then(res => {
+        // console.log('页面被展示', res)
+        this.setData({
+          commentCount: res.total
+        })
+      }).catch(err => {
+        console.log('请求数据库失败', err)
       })
-    }).catch(err => {
-      console.log('请求数据库失败', err)
-    })
-  }
+    }
+  },
 })

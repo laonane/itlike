@@ -1,1 +1,40 @@
 /* pages/questionDetail/questionDetail.wxss */
+.container {
+  width: 100%;
+  position: absolute;
+}
+
+.questionCard {
+  width: 100%;
+}
+
+.questionBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.commentPane {
+  width: 100%;
+  padding: 10rpx;
+  padding-bottom: 80rpx;
+  box-sizing: border-box;
+}
+
+.commentPane .top {
+  height: 80rpx;
+  font-size: 36rpx;
+  color: rgb(65, 143, 216);
+  border-bottom: 0.5px solid #ccc;
+  line-height: 80rpx;
+}
+
+.comment {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  padding: 4rpx 8rpx;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  /* border: 1rpx solid rgba(0, 0, 0, 0.1); */
+}
