@@ -126,13 +126,12 @@ Page({
    */
   onShareAppMessage: function (evt) {
     // console.log('分享按钮被触发', evt)
-    if (evt.target) {
+    if (this.data.questionM._id) {
       // let questionID = evt.target.dataset.questionid
-      let result = this.data.questionM
       return {
-        title: result.question.content,
-        imageUrl: result.question.fileIDs[0],
-        path: '/pages/questionDetail/questionDetail'
+        title: this.data.questionM.question.content,
+        imageUrl: this.data.questionM.question.fileIDs[0],
+        path: "/pages/questionDetail/questionDetail?qid=" + this.data.questionM._id
       }
     }
   }

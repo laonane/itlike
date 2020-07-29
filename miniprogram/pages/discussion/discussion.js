@@ -167,7 +167,7 @@ Page({
       return {
         title: result.question.content,
         imageUrl: result.question.fileIDs[0],
-        path: "pages/questionDetail/questionDetail?qid=" + questionID
+        path: "/pages/questionDetail/questionDetail?qid=" + questionID
       }
     }
   }
