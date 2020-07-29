@@ -1,2 +1,8 @@
-<!--pages/myDataPage/myDataPage.wxml-->
-<text>pages/myDataPage/myDataPage.wxml</text>
+<view class="container">
+	<block wx:for="{{questionList}}" wx:key="_id">
+		<question-card questionM="{{item}}" class="questionCard" />
+		<question-bar questionID="{{item._id}}" class="queationBar"  />
+	</block>
+
+	<load-more isLoading="{{isLoadMore}}" />
+</view>

@@ -1,1 +1,12 @@
 /* pages/myDataPage/myDataPage.wxss */
+.container {
+  width: 100%;
+}
+
+.questionCard{
+  width: 100%;
+}
+
+.queationBar {
+  width: 100%;
+}

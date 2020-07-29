@@ -14,9 +14,9 @@ Page({
   /**
    * 分页加载 + 下拉刷新
    */
-  _handlerLoadMore: async function() {
+  _handlerLoadMore: async function () {
     // console.log('questionID', this.data.questionM._id)
-    console.log(currentPageNum)
+    // console.log(currentPageNum)
     this.setData({
       isLoading: true
     })
@@ -28,7 +28,7 @@ Page({
         questionID: questionID
       }
     }).then(res => {
-      console.log(res)
+      // console.log(res)
       wx.stopPullDownRefresh()
       this.setData({
         isLoading: false
@@ -122,7 +122,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    // this._handlerLoadMore()
+    this._handlerLoadMore()
   },
 
   /**

@@ -20,7 +20,7 @@
     </view>
   </view>
   <view class="share-mp">
-    <view class="cell iconfont icon-tuijian">
+    <view class="cell iconfont icon-tuijian" bindtap="_handlerMiniCodeTap">
          推荐小程序
       <i class="iconfont icon-gengduo1 more"/>
     </view>

@@ -1,5 +1,15 @@
 // miniprogram/pages/mine/mine.js
 Page({
+  _handlerMiniCodeTap(){
+    wx.cloud.callFunction({
+      name:'getMiniCode'
+    }).then(res => {
+      // console.log(res.result)
+      wx.previewImage({
+        urls: [res.result],
+      })
+    })
+  },
   _handlerMyDataTag: (evt) => {
     let type = evt.currentTarget.dataset.type
     wx.navigateTo({

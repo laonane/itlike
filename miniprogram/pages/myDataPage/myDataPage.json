@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "question-card": "/components/questionCard/questionCard",
+    "question-bar": "/components/questionBar/questionBar",
+    "load-more": "/components/loadMore/loadMore"
+  }
 }

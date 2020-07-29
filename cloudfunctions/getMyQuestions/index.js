@@ -11,21 +11,18 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   let openid = wxContext.OPENID
 
-  let comment = event.comment
-  let qID = event.qID
-  let userInfo = event.userInfo
+  let pageSize = event.pageSize || 1
+  let count = event.count || 20
 
   let db = cloud.database()
-  let aC = db.collection('answers')
-
-  let result = await aC.add({
-    data:{
-      _openid: openid,
-      comment,
-      qID,
-      userInfo,
-      createTime: db.serverDate()
-    }
+  let ansewerC = db.collection('questions')
+  let result = await ansewerC.where({
+    _openid: openid
+  }).skip((pageSize - 1) * count).limit(count).orderBy('createTime', 'desc').get().then(res=>{
+    return res.data
+  }).catch(err => {
+    return []
   })
+  
   return result
 }

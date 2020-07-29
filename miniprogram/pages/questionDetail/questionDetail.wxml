@@ -11,6 +11,4 @@
 		</view>
 		<load-more isLoading="{{isLoading}}" bindtap="_handlerLoadMore" />
 	</view>
-
-
 </view>
