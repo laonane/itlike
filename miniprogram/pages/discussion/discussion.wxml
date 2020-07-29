@@ -1,2 +1,15 @@
-<!--miniprogram/pages/discussion/discussion.wxml-->
-<text>miniprogram/pages/discussion/discussion.wxml</text>
+<view class="container">
+	<!-- 搜索栏 -->
+	<search-bar bind:publish="_handlerPublishFunc" bind:search="_handlerSearchFunc" class="searchBar" />
+
+	<!-- 问题详情 -->
+	<block wx:for="{{questionList}}" wx:key="_id">
+		<question-card class="question-card" questionM="{{item}}" />
+		<question-bar class="question-bar" questionID="{{item._id}}" commemtCount="{{commentCount}}"/>
+	</block>
+
+	<!-- 加载更多 -->
+	<load-more isLoading="{{isLoadingMore}}"/>
+	<!-- 请求弹窗 -->
+	<author-pane isModal="{{isModal}}" bind:authorSuccess="_handlerAuthorSuccess" />
+</view>

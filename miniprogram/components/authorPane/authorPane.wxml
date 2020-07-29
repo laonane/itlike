@@ -1,0 +1,7 @@
+<modal-pane modalTitle="用户权限请求" isModal="{{isModal}}">
+	<view class="authorPane">
+		<image src="/images/avatar.jpg" class="logo"></image>
+		<view class="desc">友情提示: 此操作, 需要获取您的个人头像以及昵称信息, 请授权</view>
+		<button open-type="getUserInfo" bindgetuserinfo="_handlerUserInfor" type="primary" class="authorBtn">点击获取用户信息</button>
+	</view>
+</modal-pane>

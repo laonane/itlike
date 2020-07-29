@@ -1,0 +1,23 @@
+/* components/authorPane/authorPane.wxss */
+.authorPane .logo {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 75rpx;
+  border: 1px solid tomato;
+  box-sizing: border-box;
+  display: block;
+  margin: 10rpx auto;
+}
+
+.authorPane .desc {
+  color: #666;
+  font-size: 28rpx;
+  text-align: center;
+  width: 500rpx;
+  margin: 10rpx auto;
+}
+.authorPane .authorBtn {
+  width: 500rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+}

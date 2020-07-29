@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "author-pane": "/components/authorPane/authorPane",
+    "answer-pane": "/components/answerPane/answerPane"
+  }
+}

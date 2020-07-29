@@ -15,7 +15,7 @@
 ## 最新公开课
 
 - 课程列表采用轮播图的方式呈现
-- 热门评论是直接爬取 [课程用户评论](https://m.ke.qq.com/cgi-bin/comment_new/course_comment_list)
+- 热门评论是直接爬取 [课程用户评论API:https://m.ke.qq.com/cgi-bin/comment_new/course_comment_list](#)
 - 采用云开发提供的数据库进行开发
 
 ## 学习路线
@@ -27,6 +27,10 @@
 ## 关于撩课
 
 - 使用video组件
+
+# 讨论区
+
+## 搜索界面
 
 ## 参考文档
 

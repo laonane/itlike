@@ -60,7 +60,7 @@
 <view class="footer">Copyright © 2020 老衲.</view>
 
 <button open-type="contact" class="contact" style="width:100rpx;">
-	<image src="/images/icon/laona_avatar.jpg" class="contact-img"></image>
+	<image src="/images/avatar.jpg" class="contact-img"></image>
 </button>
 
 <wxs module="timeTool" src="../../tools/timeFormat.wxs" />

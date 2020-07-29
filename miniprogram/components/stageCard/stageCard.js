@@ -31,7 +31,7 @@ Component({
       // console.log(obj)
       obj.fail = function () {
         wx.showToast({
-          image: "/images/icon/error.png",
+          image: "/images/error.png",
           title: '打开三方小程序失败!'
         })
       }

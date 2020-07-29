@@ -1,0 +1,40 @@
+/* components/modalPane/modalPane.wxss */
+@import "/style/icon-font.wxss";
+
+.modalPane {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
+
+.modalContainer {
+  width: 100%;
+  height: auto;
+  padding: 20rpx;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  height: 60rpx;
+  color: #666;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28rpx;
+  font-weight: bolder;
+  /* color: red; */
+}

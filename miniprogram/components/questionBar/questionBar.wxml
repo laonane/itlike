@@ -1,0 +1,25 @@
+<view class="questionBar">
+	<view class="iconfont icon-answer answer-btn" bindtap="_handlerAnswer">回答{{countTool.countFormat(commentCount)}}</view>
+	<button class="iconfont icon-share share-btn" open-type="share" data-questionID="{{questionID}}">分享</button>
+</view>
+
+<author-pane isModal="{{isModal}}" bind:authorSuccess="_handlerAuthorSuccess" />
+<answer-pane isModal="{{isAnswer}}" bind:publishAnswer="_handlerPublishAnswer" />
+
+<wxs module="countTool">
+	function countFormat(count) {
+		if (count === 0) {
+			return ''
+		}
+		if (count < 1000) {
+			return "(" + count + ")"
+		}
+		if (count < 10000) {
+			return "(" + parseFloat(count / 1000).toFixed(2) + "k)"
+		}
+		return "(" + parseFloat(count / 10000).toFixed(2) + "w)"
+	}
+	module.exports = {
+		countFormat: countFormat
+	}
+</wxs>

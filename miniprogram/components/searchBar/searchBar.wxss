@@ -1,0 +1,65 @@
+/* components/searchBar/searchBar.wxss */
+@import "/style/icon-font.wxss";
+
+.container {
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d4237a;
+  display: flex;
+  padding: 8rpx;
+  box-sizing: border-box;
+}
+
+.container .publish {
+  width: 80rpx;
+  height: 100%;
+  background-color: #fff;
+  font-size: 60rpx;
+  color: #d4237a;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.container .searchContainer {
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  position: relative;
+}
+
+.container .searchContainer .search-input {
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 40rpx;
+  border: 1rpx solid #d4237a;
+  box-sizing: border-box;
+  margin-right: 10rpx;
+  padding-left: 66rpx;
+  font-size: 26rpx;
+}
+
+.container .searchContainer .search-icon {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 50rpx;
+  text-align: center;
+  justify-content: center;
+  color: #d4237a;
+  /* background-color: cyan; */
+  left: 6rpx;
+  top: 3rpx;
+  position: absolute;
+}
+
+.container .searchContainer .search-button {
+  width: 150rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+  background-color: #d4237a;
+  color: white;
+  min-height: 0;
+}

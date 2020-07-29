@@ -1,0 +1,8 @@
+<modal-pane isModal="{{isModal}}" modalTitle="我要回答">
+	<view>
+		<form bindsubmit="_handlerSubmit">
+			<textarea name="content" class="content" placeholder="请输入内容···"></textarea>
+			<button form-type="submit" type="primary">我要回答</button>
+		</form>
+	</view>
+</modal-pane>

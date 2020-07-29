@@ -1,0 +1,53 @@
+<view class="questionCard">
+	<!-- 个人信息和发布信息 -->
+	<view class="top">
+		<image class="headerImg" src="{{questionM.userinfo.avatarUrl}}" />
+		<view class="otherMsg">
+			<view class="name">{{questionM.userinfo.nickName}}</view>
+			<view class="time">
+				<text>{{timeTool.getShowTime(questionM.createTime)}}</text>
+				<text decode>&nbsp;&nbsp;&nbsp;来自: {{questionM.deviceMsg[0]}}</text>
+			</view>
+		</view>
+	</view>
+
+	<!-- 发布内容 -->
+	<view class="content" bind:tap="_handlerDetail">
+		<view class="text">{{questionM.question.content}}</view>
+		<!-- style1 style24 style356789 -->
+		<view class="{{styleTool.getStyle(questionM.question.fileIDs.length)}}">
+			<block wx:for="{{questionM.question.fileIDs}}" wx:key="_id" wx:for-item="picUrl"> 
+				<image mode="aspectFill" src="{{picUrl}}" data-src="{{picUrl}}" bindtap="_handlerPreviewImage"/>
+			</block>
+		</view>
+	</view>
+
+	<!-- 位置信息 -->
+	<view class="location iconfont icon-location" wx:if="{{questionM.location.name || questionM.location.address}}">
+		{{questionM.location.name || questionM.location.address}}
+	</view>
+
+</view>
+
+<wxs module="timeTool" src="../../tools/timeFormat.wxs" />
+<wxs module="styleTool">
+  function getStyle(imageCount) {
+    switch(imageCount) {
+      case 1: 
+        return "style1"
+      case 2: 
+      case 4:
+        return "style24"
+      case 3:
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+      case 9:
+        return "style356789"
+    }
+  }
+  module.exports = {
+    getStyle: getStyle
+  }
+</wxs>

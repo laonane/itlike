@@ -1,4 +1,11 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "讨论区"
+  "usingComponents": {
+    "search-bar": "/components/searchBar/searchBar",
+    "author-pane": "/components/authorPane/authorPane",
+    "question-card": "/components/questionCard/questionCard",
+    "question-bar": "/components/questionBar/questionBar",
+    "load-more": "/components/loadMore/loadMore"
+  },
+  "navigationBarTitleText": "讨论区",
+  "enablePullDownRefresh": true
 }

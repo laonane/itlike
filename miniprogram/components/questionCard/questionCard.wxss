@@ -1,0 +1,88 @@
+/* components/questionCard/questionCard.wxss */
+@import "/style/icon-font.wxss";
+
+.questionCard {
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-top: 1rpx solid gainsboro;
+}
+
+.top {
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+}
+
+.top .headerImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-right: 20rpx;
+}
+
+.top .otherMsg {
+  flex: 1;
+  /* background: tomato; */
+  display: flex;
+  flex-direction: column;
+}
+
+.top .otherMsg .name {
+  color: #707070;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.top .otherMsg .time {
+  color: #666;
+  font-size: 26rpx;
+}
+
+
+.content .text {
+  font-size: 34rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+
+.content .style1 image {
+  width: 100%;
+  max-height: 500rpx;
+}
+
+
+.content .style24 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content .style24 image {
+  width: 347rpx;
+  height: 347rpx;
+  margin-bottom: 16rpx;
+}
+
+.content .style356789 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .style356789 image {
+  width: 225rpx;
+  height: 225rpx;
+  margin-bottom: 16rpx;
+}
+
+.content .style356789 image:nth-child(2),
+.content .style356789 image:nth-child(5),
+.content .style356789 image:nth-child(8) {
+  margin: 0 16rpx;
+}
+
+.location {
+  font-size: 30rpx;
+  color: #666;
+  margin: 10rpx 0;
+}

@@ -1,0 +1,12 @@
+<!--components/modalPane/modalPane.wxml-->
+<view class="modalPane" hidden="{{!isModal}}">
+  <view class="modalContainer">
+    <view class="top">
+      <text>{{modalTitle}}</text>
+      <i class="iconfont icon-close close" bind:tap="_handlerClose"/>
+    </view>
+    <view class="content">
+      <slot/>
+    </view>
+  </view>
+</view>

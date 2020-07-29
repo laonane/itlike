@@ -1,0 +1,37 @@
+<view style="padding-bottom: 80rpx;">
+	<!-- 头像和昵称 -->
+	<view class="top">
+		<image class="background" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
+		<image class="header" src="{{userInfo.avatarUrl}}" />
+		<text class="nickName">{{userInfo.nickName}}</text>
+	</view>
+
+	<!-- 问题描述 -->
+	<textarea maxlength="{{maxLength}}" placeholder="请输入问题描述" class="questionDesc" bindinput="_handlerInput" bindfocus="_handlerFocus" bindblur="_handlerBlur" />
+
+	<!-- 地理定位 -->
+    <view class="location iconfont icon-location" bindtap="_handlerLocation">
+    {{userLocation.name.length > 0 ? userLocation.name : (userLocation.address.length > 0 ? userLocation.address : "点击获取当前位置信息...")}}
+    <i class="iconfont icon-gengduo more"/>
+    </view>
+
+  <!-- 图片列表 -->
+  <view class="imageList">
+    <block wx:for="{{chooseImages}}" wx:key="index">
+      <view class="imageWrap">
+        <image src="{{item}}" mode="aspectFill" data-src="{{item}}" bindtap="_handlerPreviewImage"/>
+        <i data-index="{{index}}" class="iconfont icon-close close" bindtap="_handlerDeleteImage"/>
+      </view>      
+    </block>
+
+    <view class="imageWrap" bindtap="_handlerChooseImage" hidden="{{chooseImages.length === 6}}">
+      <i class="iconfont icon-add"/>
+    </view>
+  </view>
+    <!-- 发布提示条 -->
+  <view class="publishBar" style="bottom: {{publishBarToBottom}}px;">
+    <text class="notice">还剩余{{leftLength}}字</text>
+    <button type="primary" size="mini" disabled="{{!canPublish}}" bindtap="_handlerPublish">发布</button>
+  </view>
+
+</view>

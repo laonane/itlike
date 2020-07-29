@@ -1,0 +1,8 @@
+<view class="container">
+	<view class="publish iconfont icon-edit"  bindtap="_handlerPublish"></view>
+	<view class="searchContainer">
+		<input placeholder="请输入搜索关键字" class="search-input" bindinput="_handlerInput"></input>
+		<button class="search-button" bindtap="_handlerSearch">搜索</button>
+		<view class="search-icon iconfont icon-search"></view>
+	</view>
+</view>

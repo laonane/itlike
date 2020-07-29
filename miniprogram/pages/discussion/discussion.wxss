@@ -1,1 +1,22 @@
 /* miniprogram/pages/discussion/discussion.wxss */
+.container {
+  width: 100%;
+  padding-top: 80rpx;
+  background-color: white;
+}
+
+.container .searchBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.question-card {
+  width: 100%;
+}
+
+.question-bar {
+  width: 100%;
+}
