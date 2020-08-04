@@ -1,3 +1,9 @@
+# 体验码
+
+- 已经完成，并开源，可以扫码体验
+
+![体验码](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/itlike-qrcode.jpg)
+
 # 云开发
 
 本项目使用了云开发，云开发的三大基础能力：
