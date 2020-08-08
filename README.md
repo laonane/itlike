@@ -1,15 +1,20 @@
 # 体验码
 
-#### Tips
-
-- **如果没有及时授权体验，可以先扫二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
-
-![作者微信](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/laona_wechat_qr_code.jpg)
-- 已经完成，并开源，可以扫码体验
+- 已经完成整个项目，并开源，可以扫码体验
 
 - 小程序体验码
 
 ![体验码](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/itlike-qrcode.jpg)
+
+
+#### Tips
+
+- **如果没有及时授权体验，可以先扫体验二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
+- **如果没有及时授权体验，可以先扫体验二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
+- **如果没有及时授权体验，可以先扫体验二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
+
+![作者微信](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/laona_wechat_qr_code.jpg)
+
 
 
 # 云开发
@@ -25,7 +30,7 @@
 - [github地址：https://github.com/HuaiAnGG/itlike](https://github.com/HuaiAnGG/itlike)
 - 先上效果
 
-<video src="https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/07/%E5%B0%8F%E7%A8%8B%E5%BA%8F.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！，请访问：https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/07/%E5%B0%8F%E7%A8%8B%E5%BA%8F.mp4 </video>
+<video src="https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/07/%E5%B0%8F%E7%A8%8B%E5%BA%8F.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！ </video>
 
 
 # 首页模块
