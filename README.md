@@ -1,8 +1,16 @@
 # 体验码
 
+#### Tips
+
+- **如果没有及时授权体验，可以先扫二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
+
+![作者微信](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/laona_wechat_qr_code.jpg)
 - 已经完成，并开源，可以扫码体验
 
+- 小程序体验码
+
 ![体验码](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/itlike-qrcode.jpg)
+
 
 # 云开发
 
