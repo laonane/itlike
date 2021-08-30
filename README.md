@@ -9,11 +9,11 @@
 
 #### Tips
 
-- **如果没有及时授权体验，可以先扫体验二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
-- **如果没有及时授权体验，可以先扫体验二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
-- **如果没有及时授权体验，可以先扫体验二维码提交申请，然后再加作者的微信，备注：itlike体验 or itlike小程序体验，**
+- **如果没有及时授权，可以加老衲的微信，备注：itlike；或者通过邮件联系我：laonane@qq.com**
+- **如果没有及时授权，可以加老衲的微信，备注：itlike；或者通过邮件联系我：laonane@qq.com**
+- **如果没有及时授权，可以加老衲的微信，备注：itlike；或者通过邮件联系我：laonane@qq.com**
 
-![作者微信](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/laona_wechat_qr_code.jpg)
+![作者微信](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/laona_wechat_qr_code.jpg ){:height="300px" width="200px"}
 
 
 
