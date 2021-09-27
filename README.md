@@ -4,7 +4,7 @@
 
 - 小程序体验码
 
-<img src="https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/itlike-qrcode.jpg" style="width=200px; height=300px;"/>
+<img src="https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/itlike-qrcode.jpg" style="width=100px; height=200px;"/>
 
 
 #### Tips
