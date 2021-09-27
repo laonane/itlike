@@ -35,7 +35,7 @@
 
 # 首页模块
 
-![效果图](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/07/home.jpg)
+<img src="https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/07/home.jpg"/>
 
 ## 全栈直播班
 
