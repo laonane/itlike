@@ -7,16 +7,6 @@
 <img src="https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/itlike-qrcode.jpg" style="width=100px; height=200px;"/>
 
 
-#### Tips
-
-- **如果没有及时授权，可以加老衲的微信，备注：itlike；或者通过邮件联系我：laonane@qq.com**
-- **如果没有及时授权，可以加老衲的微信，备注：itlike；或者通过邮件联系我：laonane@qq.com**
-- **如果没有及时授权，可以加老衲的微信，备注：itlike；或者通过邮件联系我：laonane@qq.com**
-
-![作者微信](https://bucketblog.oss-cn-shenzhen.aliyuncs.com/blog/pic2020/08/laona_wechat_qr_code.jpg ){:height="300px" width="200px"}
-
-
-
 # 云开发
 
 本项目使用了云开发，云开发的三大基础能力：
